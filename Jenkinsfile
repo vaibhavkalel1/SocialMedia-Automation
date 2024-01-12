@@ -7,7 +7,7 @@ pipeline {
                 git 'https://github.com/vaibhavkalel1/SocialMedia-Automation.git'
             }
         }
-        /*stage('Build Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     bat "docker build -t vaibhavkalel/socialautomation ."
@@ -55,7 +55,7 @@ pipeline {
                 bat 'move minikube.exe C:\\Users\\12826\\.jenkins\\workspace\\Quiz-Automation'
                 bat 'setx PATH "%PATH%;C:\\minikube"'
             }
-        }*/
+        }
         stage('Start Minikube') {
             steps {
                 script {
@@ -75,7 +75,7 @@ pipeline {
                     bat "minikube status"
                 }
             }
-        }
+        }*/
         stage('Deploy to Kubernetes') {
             steps {
                 script {
@@ -105,7 +105,7 @@ pipeline {
                     bat "minikube service social-app-service1 --url"
                 }
             }
-        }*/
+        }
         stage('Get URL and play with Application') {
             steps {
                 script {
