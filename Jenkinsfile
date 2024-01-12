@@ -55,7 +55,7 @@ pipeline {
                 bat 'move minikube.exe C:\\Users\\12826\\.jenkins\\workspace\\Quiz-Automation'
                 bat 'setx PATH "%PATH%;C:\\minikube"'
             }
-        }
+        }*/
         stage('Start Minikube') {
             steps {
                 script {
@@ -69,7 +69,7 @@ pipeline {
                 }
             }
         }
-        stage('Minikube status') {
+        /*stage('Minikube status') {
             steps {
                 script {
                     bat "minikube status"
