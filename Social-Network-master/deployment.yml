@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smedia-app-deployment
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: smedia-app
+  template:
+    metadata:
+      labels:
+        app: smedia-app
+    spec:
+      containers:
+      - name: smedia-container
+        image: vaibhavkalel/smediaimage1:latest
+        ports:
+        - containerPort: 8000

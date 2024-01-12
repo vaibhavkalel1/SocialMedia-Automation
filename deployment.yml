@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: social-app-deployment1
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: smedia-app
+  template:
+    metadata:
+      labels:
+        app: smedia-app
+    spec:
+      containers:
+      - name: socialautomationcontainer
+        image: vaibhavkalel/socialautomation
+        ports:
+        - containerPort: 8000
